@@ -32,11 +32,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 12
 
 /* Planck PCB default pin-out */
-#define MATRIX_ROW_PINS { D0, D5, B5, B6 }
-#define MATRIX_COL_PINS { F1, F0, B0, C7, F4, F5, F6, F7, D4, D6, B4, D7 }
+// #define MATRIX_ROW_PINS { D0, D5, B5, B6 }
+// #define MATRIX_COL_PINS { F1, F0, B0, C7, F4, F5, F6, F7, D4, D6, B4, D7 }
+// #define UNUSED_PINS
+// #define BACKLIGHT_PIN B7
+
+/* Brandon Handwired Planck */
+#define MATRIX_ROW_PINS { E6, D0, D1, D2 }
+#define MATRIX_COL_PINS { D3, C6, D6, D7, B4, B5, B6, F6, F5, F4, F1, F0 }
 #define UNUSED_PINS
 
-#define BACKLIGHT_PIN B7
+/* ws2812 RGB LED  */
+// Handwired RGB Settings
+// #define ws2812_PORTREG  PORTD
+// #define ws2812_DDRREG   DDRD
+// #define ws2812_pin PD5
+// #define RGBLED_NUM 12    // Number of LEDs
+
+#define RGB_DI_PIN D5     // The pin your RGB strip is wired to
+#define RGBLIGHT_TIMER    // Require for fancier stuff (not compatible with audio)
+#define RGBLED_NUM 12     // Number of LEDs
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 17
+#define RGBLIGHT_VAL_STEP 17
+
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
